@@ -1,0 +1,2 @@
+#!/usr/bin/fish
+date +%Y%m%d

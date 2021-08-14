@@ -1,0 +1,2 @@
+#!/usr/bin/fish
+man -Tps $argv[1] | 9 page -p 90

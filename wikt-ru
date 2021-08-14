@@ -1,0 +1,2 @@
+#!/usr/bin/fish
+wikt -l ru -w $argv

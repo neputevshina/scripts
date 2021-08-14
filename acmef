@@ -1,0 +1,5 @@
+#!/usr/bin/fish
+if not test (pgrep plumber)
+	mount9p.fish
+end
+/usr/bin/acme -F /tmp/font/GoMono/10a/font -f /tmp/font/GoRegular/10a/font

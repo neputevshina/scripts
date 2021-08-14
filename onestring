@@ -1,0 +1,3 @@
+#!/usr/bin/fish
+xclip -selection clipboard -o | go run ~/bin/onestring.go | xclip -selection clipboard
+notify-send 'Newlines in clipboard had been removed'
