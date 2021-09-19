@@ -1,0 +1,2 @@
+#!/usr/bin/fish
+magick fd:0 -resize 512x512 fd:1
