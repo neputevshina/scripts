@@ -1,2 +1,4 @@
 #!/usr/bin/fish
-ctrlv >/tmp/paste.txt
+cp /dev/null /tmp/paste.txt
+leafpad /tmp/paste.txt 2>/dev/null
+ctrlc </tmp/paste.txt
