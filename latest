@@ -1,2 +1,2 @@
 #!/usr/bin/fish
-ls --time creation | sed 1q
+ls --time status | sed 1q
