@@ -1,3 +1,3 @@
 #!/usr/bin/fish
-ctrlv | sed 's/  */ /g' | tr '\n' ' ' | ctrlc
+ctrlv | tr '\t\n' ' ' | sed 's/  */ /g' | ctrlc
 notify-send 'Newlines and extra spaces in clipboard had been removed.'

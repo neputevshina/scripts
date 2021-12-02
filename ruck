@@ -1,0 +1,2 @@
+#!/usr/bin/fish
+echo "$argv" | hunspell -d ru_RU

@@ -1,0 +1,2 @@
+#!/bin/sh
+picom --vsync --shadow --shadow-radius=4 --shadow-offset-x=-4 --shadow-offset-y=-2 --config /dev/null --shadow-opacity=0.2

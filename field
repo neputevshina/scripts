@@ -1,0 +1,6 @@
+#!/usr/bin/fish
+set g $argv[1]
+awk '{
+	print $'$g'
+	$0 = ""
+}' 
