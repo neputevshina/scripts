@@ -1,0 +1,4 @@
+#!/usr/bin/fish
+set name "/tmp/paste"(date +%s)
+cat >$name
+codium $name

@@ -1,0 +1,2 @@
+#!/usr/bin/fish
+curl -d $argv[1] ntfy.sh/$NTFYSH_TOPIC -H "Title: $argv[2]"

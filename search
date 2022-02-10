@@ -1,0 +1,2 @@
+#!/usr/bin/fish
+s "$argv" | incodium

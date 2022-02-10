@@ -1,0 +1,51 @@
+#!/usr/bin/fish
+set home ~/zettel
+set hidden zettel.counter
+
+function open
+	leafpad $home/$argv[1]
+end	
+
+function show
+	cat $home/$argv[1]
+end	
+
+function list 
+	ls $home | awk "!/$hidden/{print}"
+end
+
+function new
+	set -l zetc
+	if test $argv[1]
+		set zetc $argv[1]
+	else
+		set zetc (cat $home/zettel.counter)
+		echo (expr $zetc + 1) >$home/zettel.counter
+	end
+	touch $home/$zetc && open $home/$zetc
+end
+
+function refs
+	set -l tfile /tmp/zettel.refs
+	set -l tfile1 /tmp/zettel.refs.1
+	
+	for h in (list)
+		cat $home/$h | sed '1q' >>$tfile
+	end
+	uniq $tfile > $tfile1
+	for i in (cat $tfile1)
+		if test $i
+			echo \# from $i:
+			cat $home/$i | awk 'NR != 1 {print}'
+		end
+	end
+	rm $tfile
+end
+
+if test $argv[2]
+	$argv[1] $argv[2]
+else
+	$argv[1]
+end
+
+
