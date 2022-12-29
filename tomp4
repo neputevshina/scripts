@@ -1,0 +1,2 @@
+#!/usr/bin/fish
+ffmpeg -i $argv[1] -b:a 310k $argv[1].mp4

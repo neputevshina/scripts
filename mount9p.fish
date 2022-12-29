@@ -3,6 +3,7 @@
 killall fontsrv
 killall plumber
 fusermount -uz /tmp/font
+rm -rf /tmp/font
 
 fontsrv & 
 plumber &

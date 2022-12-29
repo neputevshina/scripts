@@ -1,0 +1,2 @@
+#!/usr/bin/fish
+python -c "print("(echo $argv | sed 's/×/*/g')")"

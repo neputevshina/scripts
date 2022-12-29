@@ -1,0 +1,2 @@
+#!/usr/bin/fish
+ffmpeg -i $argv[1] $argv[1].flac

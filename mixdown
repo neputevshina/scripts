@@ -1,0 +1,8 @@
+#!/usr/bin/fish
+
+for i in $argv
+	set -a argv2 '-i'
+	set -a argv2 $i
+end
+
+ffmpeg $argv2 -filter_complex amix=inputs=(count $argv):duration=longest -f wav -

@@ -1,2 +1,10 @@
 #!/usr/bin/fish
-ls --time status | sed 1q
+if not test $argv[1] 
+	echo (ls --time status | sed 1q)	
+	exit
+end
+set -g prev "$argv[1]"
+if not test (string match -r '/$' $argv[1])
+	set -g prev "$argv[1]/"
+end
+echo $prev(ls $argv[1] --time status | sed 1q)

@@ -1,0 +1,7 @@
+#!/usr/bin/fish
+set regex '(https:\/\/)?(www\.)?youtube\.com\/watch\?v=(?<vid>[a-zA-Z0-9\_\-]+)$'
+if string match -r $regex $argv[1] >/dev/null
+	curl -fsSL --output - https://img.youtube.com/vi/$vid/maxresdefault.jpg
+	exit $status
+end
+exit 1
